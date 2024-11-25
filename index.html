@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda Petshop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho -->
+    <header>
+      <h1>Projeto Mundo Pet</h1>
+    </header>
+
+    <!-- Seletor de Data -->
+    <section class="data-section">
+      <label for="data">Escolha a data:</label>
+      <input type="date" id="data">
+    </section>
+
+    <!-- Agenda -->
+    <main class="agenda">
+      <!-- Manhã -->
+      <div class="periodo" id="manha">
+        <h2>Manhã</h2>
+        <ul>
+          <li>
+            <span>09:00</span> Thor / Fernanda Costa - Vacinação
+            <button class="remove-btn">Remover</button>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Tarde -->
+      <div class="periodo" id="tarde">
+        <h2>Tarde</h2>
+        <ul>
+          <li>
+            <span>13:00</span> Mel / João Souza - Corte de Unhas
+            <button class="remove-btn">Remover</button>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Noite -->
+      <div class="periodo" id="noite">
+        <h2>Noite</h2>
+        <ul>
+          <li>
+            <span>20:00</span> Max / Camila Santos - Limpeza de Dentes
+            <button class="remove-btn">Remover</button>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- Botão de Novo Agendamento -->
+    <button id="novo-agendamento">Novo Agendamento</button>
+  </div>
+
+  <!-- Modal para Novo Agendamento -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Novo Agendamento</h2>
+      <form id="agendamento-form">
+        <label for="nome">Nome do Cliente:</label>
+        <input type="text" id="nome" required>
+        
+        <label for="pet">Nome do Pet:</label>
+        <input type="text" id="pet" required>
+
+        <label for="horario">Horário:</label>
+        <input type="time" id="horario" required>
+        
+        <label for="servico">Serviço:</label>
+        <input type="text" id="servico" required>
+        
+        <label for="periodo">Período:</label>
+        <select id="periodo" required>
+          <option value="manha">Manhã</option>
+          <option value="tarde">Tarde</option>
+          <option value="noite">Noite</option>
+        </select>
+        
+        <button type="submit">Salvar</button>
+        <button type="button" id="cancelar">Cancelar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
